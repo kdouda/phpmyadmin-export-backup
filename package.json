@@ -1,0 +1,22 @@
+{
+  "name": "pma-backup",
+  "version": "1.0.0",
+  "description": "phpMyAdmin backup script",
+  "main": "index.js",
+  "scripts": {
+    "backup": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdouda/wedos-backup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdouda/wedos-backup/issues"
+  },
+  "homepage": "https://github.com/kdouda/wedos-backup#readme",
+  "dependencies": {
+    "puppeteer": "^8.0.0"
+  }
+}

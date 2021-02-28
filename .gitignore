@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# default export directory
+exports/
+
+# do not accidentally commit credentials
+credentials.json
+
+!.gitkeep
