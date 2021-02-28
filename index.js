@@ -16,6 +16,8 @@ const wait = (len) => {
   const page = await browser.newPage();
   const path = require('path')
 
+  // login
+
   await page.goto(credentials.pma);
 
   await page.type('#input_username', credentials.username);
@@ -25,6 +27,8 @@ const wait = (len) => {
     page.click('#input_go'),
     page.waitForNavigation(),
   ]);
+
+  // locating the DB list page
 
   await wait(3000);
 
@@ -37,6 +41,8 @@ const wait = (len) => {
     dbLinks[0].click(),
     frame.waitForNavigation(),
   ]);
+  
+  // locating the database's page
 
   await wait(3000);
 
@@ -47,12 +53,16 @@ const wait = (len) => {
     frame.waitForNavigation(),
   ]);
 
+  // locating the export page
+
   const dbExportLink = await frame.$x("//a[contains(@href, 'db_export.php')]");
   
   await Promise.all([
     dbExportLink[0].click(),
     frame.waitForNavigation({waitUntil: "domcontentloaded"}),
   ]);
+
+  // exporting with default options
 
   await frame.waitForSelector('#buttonGo');
 

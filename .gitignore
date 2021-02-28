@@ -104,9 +104,7 @@ dist
 .tern-port
 
 # default export directory
-exports/
+exports/*.sql
 
 # do not accidentally commit credentials
 credentials.json
-
-!.gitkeep
